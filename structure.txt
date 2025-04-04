@@ -1,0 +1,59 @@
+<body>
+    <div class="container">
+        <h1>Kevin's Konga Pre-Enrollment System</h1>
+        <p class="text-xl text-center mb-8">Vite Configuration and Project Structure</p>
+
+        <div class="note">
+            <p class="font-semibold">Project Overview</p>
+            <p>This document provides the configuration files and project structure for the Kevin's Konga pre-enrollment system built with Vite as the bundler. The system includes a React frontend styled with Tailwind CSS and an Express backend with MongoDB as the database.</p>
+        </div>
+
+        <h2>1. Project Structure</h2>
+        <p>The project follows a monorepo structure with both the frontend and backend in the same repository:</p>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span>Project Folder Structure</span>
+                <span class="tag">Directory Tree</span>
+            </div>
+            <pre class="folder-structure">
+genspk-tkfs-prelaunch/
+├── client/                   # Frontend Vite + React application
+│   ├── public/               # Static assets
+│   ├── src/                  # React source code
+│   │   ├── assets/           # Images, fonts, etc.
+│   │   ├── components/       # Reusable components
+│   │   │   ├── admin/        # Admin dashboard components
+│   │   │   ├── dashboard/    # Member dashboard components
+│   │   │   ├── landing/      # Landing page components
+│   │   │   └── shared/       # Shared components
+│   │   ├── context/          # React context providers
+│   │   ├── hooks/            # Custom React hooks
+│   │   ├── layouts/          # Layout components
+│   │   ├── pages/            # Page components
+│   │   ├── services/         # API service functions
+│   │   ├── store/            # State management (Redux or Context)
+│   │   ├── styles/           # Global styles and Tailwind customization
+│   │   ├── utils/            # Utility functions
+│   │   ├── App.jsx           # Main App component
+│   │   ├── main.jsx          # Entry point
+│   │   └── vite-env.d.ts     # Vite environment declaration
+│   ├── .eslintrc.js          # ESLint configuration
+│   ├── index.html            # HTML entry point
+│   ├── package.json          # Frontend dependencies
+│   ├── tailwind.config.js    # Tailwind CSS configuration
+│   └── vite.config.js        # Vite configuration
+├── server/                   # Backend Node.js/Express application
+│   ├── config/               # Configuration files
+│   ├── controllers/          # Request handlers
+│   ├── middleware/           # Express middleware
+│   ├── models/               # MongoDB models
+│   ├── routes/               # API routes
+│   ├── services/             # Business logic
+│   ├── utils/                # Utility functions
+│   ├── package.json          # Backend dependencies
+│   └── server.js             # Entry point
+├── .gitignore                # Git ignore file
+├── README.md                 # Project documentation
+└── package.json              # Root package.json for scripts
+</pre>

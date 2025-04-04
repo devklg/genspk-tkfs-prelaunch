@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+:root {
+  --primary-color: #1e40af; /* Talk Fusion blue */
+  --secondary-color: #eab308; /* Talk Fusion gold */
+  --dark-bg: #0f172a;
+  --card-bg: #1e293b;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg transition duration-300;
+}
+
+.btn-secondary {
+  @apply bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-slate-800 rounded-lg p-6 shadow-lg;
+}
+
+/* Animation classes */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @property --primary {
+    syntax: '<color>';
+    initial-value: #0ea5e9;
+    inherits: false;
+  }
+
+  :root {
+    --primary: #0ea5e9;
+  }
+
+  /* Dark mode custom properties */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #38bdf8;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 active:bg-primary-700;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary-500 text-primary-500 hover:bg-primary-50 active:bg-primary-100;
+  }
+}
+
+/* Enable smooth scrolling */
+@layer utilities {
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+} 
